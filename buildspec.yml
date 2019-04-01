@@ -7,7 +7,7 @@ phases:
       - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
+      - echo Logging in to Amazon ECR..TEST.
       - docker build -t helloworld .
   build:
     commands:

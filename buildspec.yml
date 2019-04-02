@@ -9,7 +9,7 @@ phases:
     commands:
       - aws ecr create-repository --repository-name ${RegistryName}
       - docker build -t helloworld .
-      - docker tag h ${AccountId}.dkr.ecr.${Region}.amazonaws.com/${RegistryName}
+      - docker tag helloworld ${AccountId}.dkr.ecr.${Region}.amazonaws.com/${RegistryName}
       - aws ecr get-login --no-include-email
       - docker login
       - docker push ${AccountId}.dkr.ecr.${Region}.amazonaws.com/${RegistryName}

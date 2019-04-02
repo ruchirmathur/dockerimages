@@ -16,4 +16,4 @@ phases:
   build:
     commands:
       - docker images
-      - docker run helloworld echo "Hello, World!" 
+      - docker run helloworld echo "Hello, World! Trigger" 

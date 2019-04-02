@@ -11,6 +11,7 @@ phases:
       - docker build -t helloworld .
       - docker tag helloworld ${AccountId}.dkr.ecr.${Region}.amazonaws.com/${RegistryName}
       - aws ecr get-login --no-include-email
+      - $(aws ecr get-login --no-include-email)
       - docker push ${AccountId}.dkr.ecr.${Region}.amazonaws.com/${RegistryName}
   build:
     commands:
